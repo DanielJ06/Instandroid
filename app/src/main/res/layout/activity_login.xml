@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".login.presentation.MainActivity">
+
+    <ImageView
+        android:id="@+id/login_image_view_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginBottom="50dp"
+        android:paddingStart="80dp"
+        android:paddingEnd="80dp"
+        android:src="@drawable/instagram_logo_black" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/login_edit_text_email"
+        style="@style/InstaFormEditText"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/login_edit_text_password"
+        style="@style/InstaFormEditText"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_button_submit"
+        android:text="@string/enter"
+        style="@style/InstaFormButton" />
+
+</LinearLayout>
