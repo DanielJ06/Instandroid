@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context=".login.presentation.MainActivity">
+    tools:context=".login.presentation.LoginActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,17 +26,36 @@
                 android:paddingEnd="80dp"
                 android:src="@drawable/instagram_logo_black" />
 
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/login_edit_text_email"
-                style="@style/InstaFormEditText"
-                android:hint="@string/email"
-                android:inputType="textEmailAddress" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/login_edit_text_email_input"
+                style="@style/InstaFormEditTextInput"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false">
 
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/login_edit_text_password"
-                style="@style/InstaFormEditText"
-                android:hint="@string/password"
-                android:inputType="textPassword" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/login_edit_text_email"
+                    style="@style/InstaFormEditText"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/login_edit_text_password_input"
+                style="@style/InstaFormEditTextInput"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/login_edit_text_password"
+                    style="@style/InstaFormEditText"
+                    android:hint="@string/password"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/login_button_submit"
@@ -72,10 +91,10 @@
                 android:textAllCaps="false" />
 
             <View
-                android:layout_marginTop="30dp"
                 android:id="@+id/divider_bottom"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
+                android:layout_marginTop="50dp"
                 android:background="@color/grayDarker" />
 
             <androidx.appcompat.widget.AppCompatTextView
