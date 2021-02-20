@@ -3,8 +3,8 @@
     <style name="Theme.InstagramClone" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
-        <item name="colorOnPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/colorAccent</item>
     </style>
@@ -18,6 +18,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">20dp</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
         <item name="errorTextAppearance">@android:color/holo_red_light</item>
         <item name="errorTextColor">@android:color/holo_red_light</item>
     </style>
@@ -36,7 +37,7 @@
         <item name="android:padding">15dp</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:layout_marginBottom">15dp</item>
-        <item name="android:background">@drawable/rounded_button_bg</item>
+        <item name="android:background">@drawable/button_background</item>
     </style>
 
     <style name="InstaFormButton.Link" parent="InstaFormButton">
