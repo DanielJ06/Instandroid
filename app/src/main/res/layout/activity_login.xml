@@ -60,7 +60,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.danieljrodrigues.instagramclone.login.presentation.LoadingButton
-                android:id="@+id/login_button_submit"
+                android:id="@+id/loading_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:text="@string/enter" />

@@ -8,7 +8,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.widget.Button;
 import android.widget.EditText;
 
 import com.danieljrodrigues.instagramclone.R;
@@ -27,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
 
         editTextEmail = findViewById(R.id.login_edit_text_email);
         editTextPassword = findViewById(R.id.login_edit_text_password);
-        submitBtn = findViewById(R.id.login_button_submit);
+        submitBtn = findViewById(R.id.loading_button);
 
         editTextEmail.addTextChangedListener(watcher);
         editTextPassword.addTextChangedListener(watcher);
