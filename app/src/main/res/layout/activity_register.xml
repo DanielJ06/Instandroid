@@ -18,10 +18,10 @@
 
             <fragment
                 android:id="@+id/register_fragment"
-                android:name="com.danieljrodrigues.instagramclone.register.presentation.RegisterWelcomeFragment"
+                android:name="com.danieljrodrigues.instagramclone.register.presentation.RegisterPhotoFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:layout="@layout/fragment_register_welcome" />
+                tools:layout="@layout/fragment_register_photo" />
 
         </LinearLayout>
 
