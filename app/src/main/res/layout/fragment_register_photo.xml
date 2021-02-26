@@ -27,9 +27,16 @@
         android:text="@string/photo_register_subtitle" />
 
     <com.danieljrodrigues.instagramclone.login.presentation.LoadingButton
-        android:id="@+id/register_button_continue"
+        android:id="@+id/register_button_add_photo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:text="@string/add_photo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/register_photo_skip_button"
+        style="@style/InstaFormButton.Link"
+        android:layout_gravity="center"
+        android:text="@string/jump"
+        android:textAllCaps="false" />
 
 </LinearLayout>
