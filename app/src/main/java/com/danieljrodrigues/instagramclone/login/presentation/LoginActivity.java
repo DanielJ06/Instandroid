@@ -11,6 +11,7 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 
 import com.danieljrodrigues.instagramclone.R;
+import com.danieljrodrigues.instagramclone.common.view.LoadingButton;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {

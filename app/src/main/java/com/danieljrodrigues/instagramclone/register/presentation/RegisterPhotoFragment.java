@@ -4,7 +4,6 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -14,11 +13,7 @@ import android.widget.Toast;
 
 import com.danieljrodrigues.instagramclone.R;
 import com.danieljrodrigues.instagramclone.common.view.CustomDialog;
-import com.danieljrodrigues.instagramclone.login.presentation.LoadingButton;
-import com.google.android.material.snackbar.BaseTransientBottomBar;
-import com.google.android.material.snackbar.Snackbar;
-
-import static com.google.android.material.snackbar.BaseTransientBottomBar.LENGTH_LONG;
+import com.danieljrodrigues.instagramclone.common.view.LoadingButton;
 
 public class RegisterPhotoFragment extends Fragment {
     @Nullable
