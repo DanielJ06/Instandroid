@@ -23,9 +23,9 @@
     <string name="jump">Pular</string>
     <string name="add_photo">Adicionar uma foto</string>
     <string name="home">Home</string>
-    <string name="posts">publicações</string>
-    <string name="followers">seguidores</string>
-    <string name="following">seguindo</string>
+    <string name="posts">Publicações</string>
+    <string name="followers">Seguidores</string>
+    <string name="following">Seguindo</string>
     <string name="edit_profile">Editar perfil</string>
     <string name="username">username</string>
     <string name="invalid_email">Email inválido</string>
