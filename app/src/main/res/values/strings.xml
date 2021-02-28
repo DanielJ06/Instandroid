@@ -47,4 +47,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fav">favoritos</string>
     <string name="profile">perfil</string>
+    <string name="grid">Grid</string>
+    <string name="list">List</string>
 </resources>
