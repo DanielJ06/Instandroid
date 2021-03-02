@@ -3,11 +3,14 @@ package com.danieljrodrigues.instagramclone.login.presentation;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 
 import com.danieljrodrigues.instagramclone.R;
