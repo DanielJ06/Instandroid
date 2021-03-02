@@ -36,14 +36,14 @@
 
     <fragment
         android:id="@+id/main_fragment"
-        android:name="com.danieljrodrigues.instagramclone.main.profile.presentation.ProfileFragment"
+        android:name="com.danieljrodrigues.instagramclone.main.home.presentation.HomeFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/main_bottom_nav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_coordinator_toolbar"
-        tools:layout="@layout/fragment_main_profile" />
+        tools:layout="@layout/fragment_main_home" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/main_bottom_nav"
