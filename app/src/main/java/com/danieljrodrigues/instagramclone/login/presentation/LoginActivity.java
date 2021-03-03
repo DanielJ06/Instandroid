@@ -15,11 +15,12 @@ import android.view.WindowManager;
 import android.widget.EditText;
 
 import com.danieljrodrigues.instagramclone.R;
+import com.danieljrodrigues.instagramclone.common.utils.DrawableHelper;
 import com.danieljrodrigues.instagramclone.common.view.LoadingButton;
 import com.danieljrodrigues.instagramclone.databinding.ActivityLoginBinding;
 import com.google.android.material.textfield.TextInputLayout;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements LoginView {
     private ActivityLoginBinding binding;
 
     @Override
@@ -29,46 +30,26 @@ public class LoginActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        binding.loginEditTextEmail.addTextChangedListener(watcher);
-        binding.loginEditTextPassword.addTextChangedListener(watcher);
         binding.loadingButton.setOnClickListener(v -> {
             binding.loadingButton.showProgress(true);
 
             new Handler(Looper.getMainLooper()).postDelayed(() -> {
                 binding.loadingButton.showProgress(false);
-
-                binding.loginEditTextEmailInput.setError("Erro email inválido");
-                binding.loginEditTextEmail.setBackground(ContextCompat.getDrawable(
-                    LoginActivity.this,R.drawable.edit_text_error_bg)
-                );
-
-                binding.loginEditTextPasswordInput.setError("Erro senha inválido");
-                binding.loginEditTextPassword.setBackground(ContextCompat.getDrawable(
-                    LoginActivity .this,R.drawable.edit_text_error_bg)
-                );
             }, 3000);
 
         });
     }
 
-    private TextWatcher watcher = new TextWatcher() {
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+    @Override
+    public void onFailureForm(String emailError, String passwordError) {
+        if(emailError != null) {
+            binding.loginEditTextEmailInput.setError(emailError);
+            binding.loginEditTextPasswordInput.setError(emailError);
         }
+    }
 
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-            if (!s.toString().isEmpty()) {
-                binding.loadingButton.setEnabled(true);
-            } else {
-                binding.loadingButton.setEnabled(false);
-            }
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) {
-
-        }
-    };
+    @Override
+    public void onUserLogged() {
+        //TODO
+    }
 }
