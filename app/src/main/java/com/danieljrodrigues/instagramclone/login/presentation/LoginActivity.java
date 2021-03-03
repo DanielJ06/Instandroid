@@ -20,12 +20,7 @@ import com.danieljrodrigues.instagramclone.databinding.ActivityLoginBinding;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
-
     private ActivityLoginBinding binding;
-
-    private EditText editTextEmail;
-    private EditText editTextPassword;
-    private LoadingButton submitBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,27 +29,21 @@ public class LoginActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        editTextEmail = findViewById(R.id.login_edit_text_email);
-        editTextPassword = findViewById(R.id.login_edit_text_password);
-        submitBtn = findViewById(R.id.loading_button);
-
-        editTextEmail.addTextChangedListener(watcher);
-        editTextPassword.addTextChangedListener(watcher);
-        submitBtn.setOnClickListener(v -> {
-            submitBtn.showProgress(true);
+        binding.loginEditTextEmail.addTextChangedListener(watcher);
+        binding.loginEditTextPassword.addTextChangedListener(watcher);
+        binding.loadingButton.setOnClickListener(v -> {
+            binding.loadingButton.showProgress(true);
 
             new Handler(Looper.getMainLooper()).postDelayed(() -> {
-                submitBtn.showProgress(false);
+                binding.loadingButton.showProgress(false);
 
-                TextInputLayout emailInputLayout = findViewById(R.id.login_edit_text_email_input);
-                emailInputLayout.setError("Erro email inválido");
-                editTextEmail.setBackground(ContextCompat.getDrawable(
+                binding.loginEditTextEmailInput.setError("Erro email inválido");
+                binding.loginEditTextEmail.setBackground(ContextCompat.getDrawable(
                     LoginActivity.this,R.drawable.edit_text_error_bg)
                 );
 
-                TextInputLayout passwdInputLayout = findViewById(R.id.login_edit_text_password_input);
-                passwdInputLayout.setError("Erro senha inválido");
-                editTextPassword.setBackground(ContextCompat.getDrawable(
+                binding.loginEditTextPasswordInput.setError("Erro senha inválido");
+                binding.loginEditTextPassword.setBackground(ContextCompat.getDrawable(
                     LoginActivity .this,R.drawable.edit_text_error_bg)
                 );
             }, 3000);
@@ -71,9 +60,9 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             if (!s.toString().isEmpty()) {
-                submitBtn.setEnabled(true);
+                binding.loadingButton.setEnabled(true);
             } else {
-                submitBtn.setEnabled(false);
+                binding.loadingButton.setEnabled(false);
             }
         }
 
