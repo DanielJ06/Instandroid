@@ -9,15 +9,19 @@ import android.os.Handler;
 import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 
 import com.danieljrodrigues.instagramclone.R;
 import com.danieljrodrigues.instagramclone.common.view.LoadingButton;
+import com.danieljrodrigues.instagramclone.databinding.ActivityLoginBinding;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
+
+    private ActivityLoginBinding binding;
 
     private EditText editTextEmail;
     private EditText editTextPassword;
@@ -26,7 +30,9 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
 
         editTextEmail = findViewById(R.id.login_edit_text_email);
         editTextPassword = findViewById(R.id.login_edit_text_password);
